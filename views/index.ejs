@@ -1,0 +1,37 @@
+<% include partials/header %>
+
+<div class="container">
+  <div class="row ">
+    <div class="col-8 mx-auto mt-5">
+      <h3 class="text-center">Find FTP</h3>
+      <form class="form-inline" action="/users" method="POST"> 
+        <div class="form-group mx-auto">
+            <div class="input-group ">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Search</div>
+                </div>
+                <input type="email" class="form-control d-block" name="search" id="email" placeholder="Enter Search"> 
+            </div> 
+            <div class="input-group">
+              <label class="mx-2" for="inlineFormCustomSelect">Search By</label>
+              <select class="custom-select mx-2 " id="select" name="picker">
+                <option selected value="user">username</option>
+                <option value="group">Group</option>
+                <option value="folder">Folder</option>
+              </select>
+            </div>
+            
+            <div class="col-auto my-2">
+              <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+            </div>             
+            
+        </div>        
+      </form>
+      <div id="user-info" class="bg-dark text-white">
+
+      </div>
+    </div>    
+  </div>
+</div>
+
+<% include partials/footer %>
